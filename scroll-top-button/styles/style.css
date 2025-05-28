@@ -16,10 +16,9 @@ button {
 
 .section {
   margin-bottom: 40px;
-
-  &__title {
-    margin-bottom: 10px;
-  }
+}
+.section__title {
+  margin-bottom: 10px;
 }
 
 .button-top {
@@ -32,9 +31,10 @@ button {
   right: 100px;
   outline: none;
   border: none;
-  transition: background-color .3s;
-
-  &:hover {
-    background-color: #5e83e8;
-  }
+  transition: background-color 0.3s;
 }
+.button-top:hover {
+  background-color: #5e83e8;
+}
+
+/*# sourceMappingURL=style.css.map */
