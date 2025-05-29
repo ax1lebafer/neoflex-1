@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-top: 40px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+.cards {
+  gap: 20px;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  &-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  flex: 1 1 200px;
+  border-radius: 10px;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
