@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +13,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  @media (max-width: $desktop-small) {
+    padding: 0 30px;
+  }
+  
+  @media (max-width: $phone-large) {
+    padding: 0 10px;
+  }
 
   &__intro {
     margin: 30px;
     padding: 30px;
     text-align: center;
+    
+    @media (max-width: $phone-large) {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -39,11 +53,17 @@
 
   &__content {
     margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     padding: 0 30px;
+    row-gap: 40px;
+    
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
   }
 }
 
@@ -53,6 +73,31 @@
     flex: 1 1 280px;
     max-width: 300px;
     text-align: center;
+    position: relative;
+
+    @media (max-width: $tablet-large) {
+      flex: 1 1 180px;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 55px;
+      right: -100px;
+      width: 180px;
+      height: 2px;
+      background: #d4d4d4;
+      transform: translateY(-50%);
+
+      @media (max-width: $tablet-large) {
+        right: -50px;
+        width: 80px;
+      }
+
+      @media (max-width: $tablet) {
+        content: none;
+      }
+    }
   }
 
   &__icon {
